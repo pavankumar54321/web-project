@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+	<div id="app">
+		<a href=""style="color:yellow" > amzon.in</a>
+		<a href=""> Account</a>
+		<a href=""> Mycart</a>
+		<a href=""> contact us</a>
+		
+		<input placeholder="search amzon.in" >
+		<button >search</button>
+		</div>
+
+	
+</header>
+
+    <div class="container">
+        <!-- Sidebar Filters -->
+        <aside class="filter-section">
+            <h2>Filters</h2>
+
+            <label style="color:red">Category:</label>
+            <select id="categoryFilter" multiple style="color:green">
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="accessories">Accessories</option>
+				<option value="home-applianes">Home- Aplianes</option>
+				<option value="sports-gear">Sports-Gear</option>
+            </select>
+
+            <label>Price Range:</label>
+            <div class="price-range">
+                <input type="number" id="minPrice" placeholder="Min">
+                <input type="number" id="maxPrice" placeholder="Max">
+            </div>
+
+            <label>
+                <input type="checkbox" id="inStock"> In Stock Only
+            </label>
+
+            <label>Sort By:</label>
+            <select id="sort">
+                <option value="default">Default</option>
+                <option value="lowToHigh">Price: Low to High</option>
+                <option value="highToLow">Price: High to Low</option>
+                <option value="newest">Newest First</option>
+            </select>
+
+            <input type="text" id="search" placeholder="Search products...">
+
+            <button id="clearFilters">Clear Filters</button>
+        </aside>
+
+        <!-- Product Display -->
+        <main class="product-container" id="productContainer">
+            <!-- Products will be inserted here dynamically -->
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
